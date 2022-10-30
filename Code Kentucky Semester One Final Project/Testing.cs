@@ -23,9 +23,10 @@ namespace Code_Kentucky_Semester_One_Final_Project
                 string jsonResponse = await httpResponseMessage.Content.ReadAsStringAsync();
 
                 var myPosts = JsonConvert.DeserializeObject<Post[]>(jsonResponse);
-                Console.ReadLine();
+                
                 Console.WriteLine("pick");
                 var pick = Console.ReadLine();
+                Console.Beep(650, 100);
 
 
                 foreach (var post in myPosts)
@@ -33,15 +34,45 @@ namespace Code_Kentucky_Semester_One_Final_Project
 
                     if (pick == "1")
                     {
+                        
+                        Console.ForegroundColor = ConsoleColor.Blue;
                         Console.WriteLine($"{post.position}. {post.artist} - {post.name}");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine($"Genre: {post.genres}");
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine($"User Rating: {post.rating} || Number of User Ratings: {post.num_ratings} || Number of User Reviews: {post.num_reviews}");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine($"Year Released: {post.date}");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine("____________________________________________________________________________________________________");
+                        Console.WriteLine("===================================================================================================|");
+                        Console.WriteLine("___________________________________________________________________________________________________|");
+
 
                     }
                     else if (pick == "2")
                     {
                         if (post.position <= 10)
                         {
+                            
+                            Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine($"{post.position}. {post.artist} - {post.name}");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine($"Genre: {post.genres}");
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine($"User Rating: {post.rating} || Number of User Ratings: {post.num_ratings} || Number of User Reviews: {post.num_reviews}");
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine($"Year Released: {post.date}");
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.WriteLine("____________________________________________________________________________________________________");
+                            Console.WriteLine("===================================================================================================|");
+                            Console.WriteLine("___________________________________________________________________________________________________|");
                         }
+                    }
+                    else if (pick == "3")
+                    {
+                        Console.WriteLine("Pick Ranking");
+                        
                     }
 
 

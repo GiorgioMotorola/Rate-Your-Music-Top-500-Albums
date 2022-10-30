@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "F7CT5OPGRETm0Uic49tl6ew/XOmABV9MMoxs4SahsyBGULOS72OyOWqsAMO0It91UdCsTdJ1YFSyvNr3g1xPkA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\downw\\Desktop\\projects\\Code Kentucky Semester One Final Project\\Code Kentucky Semester One Final Project\\Code Kentucky Semester One Final Project.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\downw\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512",
+    "C:\\Users\\downw\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

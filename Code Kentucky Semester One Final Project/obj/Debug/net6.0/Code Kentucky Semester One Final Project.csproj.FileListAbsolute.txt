@@ -1,0 +1,18 @@
+C:\Users\downw\Desktop\projects\Code Kentucky Semester One Final Project\Code Kentucky Semester One Final Project\bin\Debug\net6.0\Code Kentucky Semester One Final Project.exe
+C:\Users\downw\Desktop\projects\Code Kentucky Semester One Final Project\Code Kentucky Semester One Final Project\bin\Debug\net6.0\Code Kentucky Semester One Final Project.deps.json
+C:\Users\downw\Desktop\projects\Code Kentucky Semester One Final Project\Code Kentucky Semester One Final Project\bin\Debug\net6.0\Code Kentucky Semester One Final Project.runtimeconfig.json
+C:\Users\downw\Desktop\projects\Code Kentucky Semester One Final Project\Code Kentucky Semester One Final Project\bin\Debug\net6.0\Code Kentucky Semester One Final Project.dll
+C:\Users\downw\Desktop\projects\Code Kentucky Semester One Final Project\Code Kentucky Semester One Final Project\bin\Debug\net6.0\Code Kentucky Semester One Final Project.pdb
+C:\Users\downw\Desktop\projects\Code Kentucky Semester One Final Project\Code Kentucky Semester One Final Project\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\downw\Desktop\projects\Code Kentucky Semester One Final Project\Code Kentucky Semester One Final Project\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\downw\Desktop\projects\Code Kentucky Semester One Final Project\Code Kentucky Semester One Final Project\obj\Debug\net6.0\Code Kentucky Semester One Final Project.csproj.AssemblyReference.cache
+C:\Users\downw\Desktop\projects\Code Kentucky Semester One Final Project\Code Kentucky Semester One Final Project\obj\Debug\net6.0\Code Kentucky Semester One Final Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\downw\Desktop\projects\Code Kentucky Semester One Final Project\Code Kentucky Semester One Final Project\obj\Debug\net6.0\Code Kentucky Semester One Final Project.AssemblyInfoInputs.cache
+C:\Users\downw\Desktop\projects\Code Kentucky Semester One Final Project\Code Kentucky Semester One Final Project\obj\Debug\net6.0\Code Kentucky Semester One Final Project.AssemblyInfo.cs
+C:\Users\downw\Desktop\projects\Code Kentucky Semester One Final Project\Code Kentucky Semester One Final Project\obj\Debug\net6.0\Code Kentucky Semester One Final Project.csproj.CoreCompileInputs.cache
+C:\Users\downw\Desktop\projects\Code Kentucky Semester One Final Project\Code Kentucky Semester One Final Project\obj\Debug\net6.0\Code Kentucky Semester One Final Project.csproj.CopyComplete
+C:\Users\downw\Desktop\projects\Code Kentucky Semester One Final Project\Code Kentucky Semester One Final Project\obj\Debug\net6.0\Code Kentucky Semester One Final Project.dll
+C:\Users\downw\Desktop\projects\Code Kentucky Semester One Final Project\Code Kentucky Semester One Final Project\obj\Debug\net6.0\refint\Code Kentucky Semester One Final Project.dll
+C:\Users\downw\Desktop\projects\Code Kentucky Semester One Final Project\Code Kentucky Semester One Final Project\obj\Debug\net6.0\Code Kentucky Semester One Final Project.pdb
+C:\Users\downw\Desktop\projects\Code Kentucky Semester One Final Project\Code Kentucky Semester One Final Project\obj\Debug\net6.0\Code Kentucky Semester One Final Project.genruntimeconfig.cache
+C:\Users\downw\Desktop\projects\Code Kentucky Semester One Final Project\Code Kentucky Semester One Final Project\obj\Debug\net6.0\ref\Code Kentucky Semester One Final Project.dll

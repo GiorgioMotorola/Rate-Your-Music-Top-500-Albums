@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,7 +26,12 @@ namespace Code_Kentucky_Semester_One_Final_Project
                 
 
 
-                Console.WriteLine("pick");
+                Console.WriteLine("Hello! Make a selection below: ");
+                Console.WriteLine("1. Return all albums 1 - 500");
+                Console.WriteLine("2. Return Top 10");
+                Console.WriteLine("3. Return all Rock related genres");
+                Console.WriteLine("4. Return all Metal related genres");
+                Console.WriteLine("5. Return all Hip Hop related genres");
                 var pick = Console.ReadLine();
                 Console.Beep(650, 100);
 
@@ -48,7 +54,7 @@ namespace Code_Kentucky_Semester_One_Final_Project
                         Console.WriteLine("____________________________________________________________________________________________________");
                         Console.WriteLine("===================================================================================================|");
                         Console.WriteLine("___________________________________________________________________________________________________|");
-
+                        
 
                     }
                     else if (pick == "2")
@@ -72,13 +78,14 @@ namespace Code_Kentucky_Semester_One_Final_Project
                     }
                     else if (pick == "3" )
                     {
+
                         List<string> artistLists = new List<string>();
                         List<string> genresList = new List<string>();
                         List<string> nameList = new List<string>();
 
                         foreach (var get in myPosts)
                         {
-                            
+                            var position = (int)get.position;
                             string? artist = get.artist;
                             string? genres = get.genres;
                             string? names = (string?)get.name;
@@ -93,8 +100,12 @@ namespace Code_Kentucky_Semester_One_Final_Project
 
                                     if (s.Contains("Rock"))
                                     {
-                                        Console.WriteLine($"Artist: {artist} - {names} || Genre: {s}");
-                                        
+                                        Console.WriteLine($"{position}. Artist: {artist} - {names}");
+                                        Console.WriteLine($"Genre: {s}");
+                                        Console.WriteLine("____________________________________________________________________________________________________");
+                                        Console.WriteLine("===================================================================================================|");
+                                        Console.WriteLine("___________________________________________________________________________________________________|");
+
                                     }
                                 }
                                 
@@ -104,32 +115,88 @@ namespace Code_Kentucky_Semester_One_Final_Project
 
                         }
 
-                    } else if (pick == "4")
+                    } 
+                    else if (pick == "4")
                     {
+                        
                         List<string> artistLists = new List<string>();
                         List<string> genresList = new List<string>();
                         List<string> nameList = new List<string>();
 
                         foreach (var get in myPosts)
                         {
-                            
+                            var position = (int)get.position;
                             string? artist = get.artist;
                             string? genres = get.genres;
                             string? names = (string?)get.name;
                             string[] strings = genres.Split(",");
-                            foreach (string s in strings)
+                            
+                            foreach (var s in strings)
                             {
                                 if (!genresList.Contains(s) && !artistLists.Contains(s) && !nameList.Contains(s))
                                 {
                                     artistLists.Add(s);
                                     genresList.Add(s);
+                                    nameList.Add(s);
+                                    
 
                                     if (s.Contains("Metal"))
                                     {
-                                        Console.WriteLine($"Artist: {artist} - {names} Genre: {s}");
+                                        Console.WriteLine($"{position}. Artist: {artist} - {names}");
+                                        Console.WriteLine($"Genre: {s}");
+                                        Console.WriteLine("____________________________________________________________________________________________________");
+                                        Console.WriteLine("===================================================================================================|");
+                                        Console.WriteLine("___________________________________________________________________________________________________|");
 
                                     }
+                                    
                                 }
+                                
+
+
+
+                            }
+
+                        }
+                    }
+                    else if (pick == "5")
+                    {
+
+                        List<string> artistLists = new List<string>();
+                        List<string> genresList = new List<string>();
+                        List<string> nameList = new List<string>();
+
+                        foreach (var get in myPosts)
+                        {
+                            var position = (int)get.position;
+                            string? artist = get.artist;
+                            string? genres = get.genres;
+                            string? names = (string?)get.name;
+                            string[] strings = genres.Split(",");
+
+                            foreach (var s in strings)
+                            {
+                                if (!genresList.Contains(s) && !artistLists.Contains(s) && !nameList.Contains(s))
+                                {
+                                    artistLists.Add(s);
+                                    genresList.Add(s);
+                                    nameList.Add(s);
+
+
+                                    if (s.Contains("Hip Hop"))
+                                    {
+
+                                        
+                                        Console.WriteLine($"{position}. Artist: {artist} - {names}");
+                                        Console.WriteLine($"Genre: {s}");
+                                        Console.WriteLine("____________________________________________________________________________________________________");
+                                        Console.WriteLine("===================================================================================================|");
+                                        Console.WriteLine("___________________________________________________________________________________________________|");
+
+                                    }
+
+                                }
+
 
 
 
@@ -138,10 +205,12 @@ namespace Code_Kentucky_Semester_One_Final_Project
                         }
                     }
 
-
+                    
                 }
+                
                 Console.ReadLine();
-
+    
+    
             }
             catch (Exception e)
             {
@@ -152,6 +221,7 @@ namespace Code_Kentucky_Semester_One_Final_Project
             {
                 client.Dispose();
             }
+            
         }
     }
 }

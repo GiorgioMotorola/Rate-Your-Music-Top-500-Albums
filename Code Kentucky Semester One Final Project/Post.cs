@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Code_Kentucky_Semester_One_Final_Project
 {
-    internal class Post
+    public class Post
     {
         public int? position { get; set; }
         public string? album_id { get; set; }
@@ -18,5 +18,7 @@ namespace Code_Kentucky_Semester_One_Final_Project
         public float? rating { get; set; }
         public int? num_ratings { get; set; }
         public int? num_reviews { get; set; }
+
+        
     }
 }

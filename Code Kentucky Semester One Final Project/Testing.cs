@@ -21,9 +21,10 @@ namespace Code_Kentucky_Semester_One_Final_Project
             {
                 var httpResponseMessage = await client.GetAsync(url);
                 string jsonResponse = await httpResponseMessage.Content.ReadAsStringAsync();
-
                 var myPosts = JsonConvert.DeserializeObject<Post[]>(jsonResponse);
                 
+
+
                 Console.WriteLine("pick");
                 var pick = Console.ReadLine();
                 Console.Beep(650, 100);
@@ -69,10 +70,72 @@ namespace Code_Kentucky_Semester_One_Final_Project
                             Console.WriteLine("___________________________________________________________________________________________________|");
                         }
                     }
-                    else if (pick == "3")
+                    else if (pick == "3" )
                     {
-                        Console.WriteLine("Pick Ranking");
-                        
+                        List<string> artistLists = new List<string>();
+                        List<string> genresList = new List<string>();
+                        List<string> nameList = new List<string>();
+
+                        foreach (var get in myPosts)
+                        {
+                            
+                            string? artist = get.artist;
+                            string? genres = get.genres;
+                            string? names = (string?)get.name;
+                            string[] strings = genres.Split(",");
+                            foreach (string s in strings)
+                            {
+                                if (!genresList.Contains(s) && !artistLists.Contains(s) && !nameList.Contains(s))
+                                {
+                                    artistLists.Add(s);
+                                    genresList.Add(s);
+                                    nameList.Add(s);    
+
+                                    if (s.Contains("Rock"))
+                                    {
+                                        Console.WriteLine($"Artist: {artist} - {names} || Genre: {s}");
+                                        
+                                    }
+                                }
+                                
+
+
+                            }
+
+                        }
+
+                    } else if (pick == "4")
+                    {
+                        List<string> artistLists = new List<string>();
+                        List<string> genresList = new List<string>();
+                        List<string> nameList = new List<string>();
+
+                        foreach (var get in myPosts)
+                        {
+                            
+                            string? artist = get.artist;
+                            string? genres = get.genres;
+                            string? names = (string?)get.name;
+                            string[] strings = genres.Split(",");
+                            foreach (string s in strings)
+                            {
+                                if (!genresList.Contains(s) && !artistLists.Contains(s) && !nameList.Contains(s))
+                                {
+                                    artistLists.Add(s);
+                                    genresList.Add(s);
+
+                                    if (s.Contains("Metal"))
+                                    {
+                                        Console.WriteLine($"Artist: {artist} - {names} Genre: {s}");
+
+                                    }
+                                }
+
+
+
+                            }
+
+                        }
                     }
 
 

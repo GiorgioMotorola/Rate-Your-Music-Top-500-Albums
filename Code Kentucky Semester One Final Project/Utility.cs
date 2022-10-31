@@ -174,5 +174,30 @@ namespace Code_Kentucky_Semester_One_Final_Project
 
             }
         }
+
+        public static async Task MakeAnotherSelection()
+        {
+            Console.WriteLine("Would you like to make another selection?");
+            Console.WriteLine("1. Yes");
+            Console.WriteLine("2. No");
+            var anotherSelection = Console.ReadLine();
+
+            while (true)
+            {
+                if (anotherSelection == "1")
+                {
+                    await Start.StartProgram();
+
+                }
+                else if (anotherSelection == "2")
+                {
+                    Console.WriteLine("Goodbye, Kenny Loggins");
+                    Environment.Exit(0);
+                }
+
+            }
+        }
+
+
     }
 }

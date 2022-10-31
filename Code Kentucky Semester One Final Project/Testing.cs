@@ -16,20 +16,16 @@ namespace Code_Kentucky_Semester_One_Final_Project
 
 
             string url = "https://raw.githubusercontent.com/GiorgioMotorola/Rate-Your-Music-Top-500-JSON/main/JSON";
-            string? pick = Utility.MainMenu();
 
             HttpClient client = new HttpClient();
-        while(pick != "0")
-            {
-
-            
+        
             try
             {
                 var httpResponseMessage = await client.GetAsync(url);
                 string jsonResponse = await httpResponseMessage.Content.ReadAsStringAsync();
                 var myPosts = JsonConvert.DeserializeObject<Post[]>(jsonResponse);
 
-                
+                string? pick = Utility.MainMenu();
 
             foreach (var post in myPosts)
              {
@@ -37,13 +33,15 @@ namespace Code_Kentucky_Semester_One_Final_Project
                     if (pick == "1")
                     {
                         Utility.SelectionOne(post);
-                    }
 
+                    }
                     else if (pick == "2")
                     {
                         if (post.position <= 10)
                         {
                             Utility.SelectionTwo(post);
+
+                            
                         }
                     }
                     else if (pick == "3")
@@ -51,6 +49,7 @@ namespace Code_Kentucky_Semester_One_Final_Project
                         Utility.SelectionThree(myPosts);
 
                     }
+                    
                     else if (pick == "4")
                     {
                         Utility.SelectionFour(myPosts);
@@ -59,6 +58,11 @@ namespace Code_Kentucky_Semester_One_Final_Project
                     {
                         Utility.SelectionFive(myPosts);
 
+                    }
+                    else if(pick == "0")
+                    {
+                        Console.WriteLine("Goodbye, Kenny Loggins");
+                       Environment.Exit(0);
                     }
                     
                 }
@@ -69,9 +73,8 @@ namespace Code_Kentucky_Semester_One_Final_Project
             }
          finally
        {
-              client.Dispose();
-             }           
-          }
+         client.Dispose();
+       }           
         }
     }
 }

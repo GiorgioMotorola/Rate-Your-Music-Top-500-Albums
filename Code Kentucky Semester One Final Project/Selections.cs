@@ -6,13 +6,15 @@
 
         public static void SelectionOne(Post post)
         {
-            Results.SelectionResult(post);
+            UI.SelectionResult(post);
         }
+
 
         public static void SelectionTwo(Post post)
         {
-            Results.SelectionResult(post);
+            UI.SelectionResult(post);
         }
+
 
         public static void SelectionThree(Post[] myPosts)
         {
@@ -27,7 +29,7 @@
                 int? position, num_ratings, num_reviews, date;
                 string? artist, names;
                 string[] strings;
-                Results.GenreParcer(get, out rating, out position, out num_ratings, out num_reviews, out date, out artist, out names, out strings);
+                UI.GenreParcer(get, out rating, out position, out num_ratings, out num_reviews, out date, out artist, out names, out strings);
 
                 foreach (string s in strings)
                 {
@@ -41,13 +43,14 @@
                         if (s.Contains("Rock"))
                         {
 
-                            Results.GenreSelectionResult(rating, position, num_ratings, num_reviews, date, artist, names, s);
+                            UI.GenreSelectionResult(rating, position, num_ratings, num_reviews, date, artist, names, s);
 
                         }
                     }
                 }
             }
         }
+
 
         public static void SelectionFour(Post[] myPosts)
         {
@@ -61,7 +64,7 @@
                 int? position, num_ratings, num_reviews, date;
                 string? artist, names;
                 string[] strings;
-                Results.GenreParcer(get, out rating, out position, out num_ratings, out num_reviews, out date, out artist, out names, out strings);
+                UI.GenreParcer(get, out rating, out position, out num_ratings, out num_reviews, out date, out artist, out names, out strings);
 
 
                 foreach (var s in strings)
@@ -74,12 +77,13 @@
 
                         if (s.Contains("Metal"))
                         {
-                            Results.GenreSelectionResult(rating, position, num_ratings, num_reviews, date, artist, names, s);
+                            UI.GenreSelectionResult(rating, position, num_ratings, num_reviews, date, artist, names, s);
                         }
                     }
                 }
             }
         }
+
 
         public static void SelectionFive(Post[] myPosts)
         {
@@ -94,7 +98,7 @@
                 int? position, num_ratings, num_reviews, date;
                 string? artist, names;
                 string[] strings;
-                Results.GenreParcer(get, out rating, out position, out num_ratings, out num_reviews, out date, out artist, out names, out strings);
+                UI.GenreParcer(get, out rating, out position, out num_ratings, out num_reviews, out date, out artist, out names, out strings);
 
 
                 foreach (var s in strings)
@@ -108,7 +112,7 @@
                         if (s.Contains("Hip Hop"))
                         {
 
-                            Results.GenreSelectionResult(rating, position, num_ratings, num_reviews, date, artist, names, s);
+                            UI.GenreSelectionResult(rating, position, num_ratings, num_reviews, date, artist, names, s);
 
                         }
                     }

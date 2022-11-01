@@ -18,7 +18,7 @@ namespace Code_Kentucky_Semester_One_Final_Project
                 string jsonResponse = await httpResponseMessage.Content.ReadAsStringAsync();
                 var myPosts = JsonConvert.DeserializeObject<Post[]>(jsonResponse);
 
-                string? pick = Results.MainMenu();
+                string? pick = UI.MainMenu();
 
                 foreach (var post in myPosts)
                 {

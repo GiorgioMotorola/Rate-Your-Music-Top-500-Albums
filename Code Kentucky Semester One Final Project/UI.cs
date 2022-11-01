@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Code_Kentucky_Semester_One_Final_Project
 {
-    public class Results
+    public class UI
     {
         public static string? MainMenu()
         {

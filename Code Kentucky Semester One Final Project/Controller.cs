@@ -8,7 +8,6 @@ namespace Code_Kentucky_Semester_One_Final_Project
         public static async Task StartProgram()
         {
 
-
             string url = "https://raw.githubusercontent.com/GiorgioMotorola/Rate-Your-Music-Top-500-JSON/main/JSON";
 
             HttpClient client = new HttpClient();
@@ -19,38 +18,36 @@ namespace Code_Kentucky_Semester_One_Final_Project
                 string jsonResponse = await httpResponseMessage.Content.ReadAsStringAsync();
                 var myPosts = JsonConvert.DeserializeObject<Post[]>(jsonResponse);
 
-                string? pick = Utility.MainMenu();
+                string? pick = Results.MainMenu();
 
                 foreach (var post in myPosts)
                 {
 
                     if (pick == "1")
                     {
-                        Utility.SelectionOne(post);
+                        Selections.SelectionOne(post);
 
                     }
                     else if (pick == "2")
                     {
                         if (post.position <= 10)
                         {
-                            Utility.SelectionTwo(post);
-
-
+                            Selections.SelectionTwo(post);
                         }
                     }
                     else if (pick == "3")
                     {
-                        Utility.SelectionThree(myPosts);
+                        Selections.SelectionThree(myPosts);
 
                     }
 
                     else if (pick == "4")
                     {
-                        Utility.SelectionFour(myPosts);
+                        Selections.SelectionFour(myPosts);
                     }
                     else if (pick == "5")
                     {
-                        Utility.SelectionFive(myPosts);
+                        Selections.SelectionFive(myPosts);
 
                     }
                     else if (pick == "0")
@@ -58,6 +55,7 @@ namespace Code_Kentucky_Semester_One_Final_Project
                         Console.WriteLine("Goodbye, Kenny Loggins");
                         Environment.Exit(0);
                     }
+
                 }
             }
             catch (Exception e)

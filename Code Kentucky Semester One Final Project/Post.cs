@@ -1,11 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Code_Kentucky_Semester_One_Final_Project
+﻿namespace Code_Kentucky_Semester_One_Final_Project
 {
     public class Post
     {
@@ -19,6 +12,5 @@ namespace Code_Kentucky_Semester_One_Final_Project
         public int? num_ratings { get; set; }
         public int? num_reviews { get; set; }
 
-        
     }
 }

@@ -1,9 +1,4 @@
-﻿using System.Net.Http;
-using Newtonsoft.Json;
-using System;
-using System.Threading.Tasks;
-
-namespace Code_Kentucky_Semester_One_Final_Project
+﻿namespace Code_Kentucky_Semester_One_Final_Project
 {
     internal class Program
     {
@@ -15,7 +10,5 @@ namespace Code_Kentucky_Semester_One_Final_Project
             await Utility.MakeAnotherSelection();
 
         }
-
-        
     }
 }

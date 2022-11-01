@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Code_Kentucky_Semester_One_Final_Project
+﻿namespace Code_Kentucky_Semester_One_Final_Project
 {
     public class Utility
     {
@@ -24,34 +18,14 @@ namespace Code_Kentucky_Semester_One_Final_Project
 
         public static void SelectionOne(Post post)
         {
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine($"{post.position}. {post.artist} - {post.name}");
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"Genre: {post.genres}");
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"User Rating: {post.rating} || Number of User Ratings: {post.num_ratings} || Number of User Reviews: {post.num_reviews}");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"Year Released: {post.date}");
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("____________________________________________________________________________________________________");
-            Console.WriteLine("===================================================================================================|");
-            Console.WriteLine("___________________________________________________________________________________________________|");
+            SelectionResult(post);
         }
+
+
 
         public static void SelectionTwo(Post post)
         {
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine($"{post.position}. {post.artist} - {post.name}");
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"Genre: {post.genres}");
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"User Rating: {post.rating} || Number of User Ratings: {post.num_ratings} || Number of User Reviews: {post.num_reviews}");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"Year Released: {post.date}");
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("____________________________________________________________________________________________________");
-            Console.WriteLine("===================================================================================================|");
-            Console.WriteLine("___________________________________________________________________________________________________|");
+            SelectionResult(post);
         }
 
         public static void SelectionThree(Post[] myPosts)
@@ -59,10 +33,15 @@ namespace Code_Kentucky_Semester_One_Final_Project
             List<string> artistLists = new List<string>();
             List<string> genresList = new List<string>();
             List<string> nameList = new List<string>();
+            List<int> numRatingsList = new List<int>();
 
             foreach (var get in myPosts)
             {
+                var rating = (float?)get.rating;
                 var position = (int?)get.position;
+                var num_ratings = (int?)get.num_ratings;
+                var num_reviews = (int?)get.num_reviews;
+                var date = (int?)get.date;
                 string? artist = get.artist;
                 string? genres = get.genres;
                 string? names = (string?)get.name;
@@ -75,21 +54,18 @@ namespace Code_Kentucky_Semester_One_Final_Project
                         genresList.Add(s);
                         nameList.Add(s);
 
+
                         if (s.Contains("Rock"))
                         {
-                            Console.WriteLine($"{position}. Artist: {artist} - {names}");
-                            Console.WriteLine($"Genre: {s}");
-                            Console.WriteLine("____________________________________________________________________________________________________");
-                            Console.WriteLine("===================================================================================================|");
-                            Console.WriteLine("___________________________________________________________________________________________________|");
+
+                            GenreSelectionResult(rating, position, num_ratings, num_reviews, date, artist, names, s);
 
                         }
                     }
-
                 }
-
             }
         }
+
 
         public static void SelectionFour(Post[] myPosts)
         {
@@ -99,11 +75,16 @@ namespace Code_Kentucky_Semester_One_Final_Project
 
             foreach (var get in myPosts)
             {
+                var rating = (float?)get.rating;
                 var position = (int?)get.position;
+                var num_ratings = (int?)get.num_ratings;
+                var num_reviews = (int?)get.num_reviews;
+                var date = (int?)get.date;
                 string? artist = get.artist;
                 string? genres = get.genres;
                 string? names = (string?)get.name;
                 string[] strings = genres.Split(",");
+
 
                 foreach (var s in strings)
                 {
@@ -113,21 +94,12 @@ namespace Code_Kentucky_Semester_One_Final_Project
                         genresList.Add(s);
                         nameList.Add(s);
 
-
                         if (s.Contains("Metal"))
                         {
-                            Console.WriteLine($"{position}. Artist: {artist} - {names}");
-                            Console.WriteLine($"Genre: {s}");
-                            Console.WriteLine("____________________________________________________________________________________________________");
-                            Console.WriteLine("===================================================================================================|");
-                            Console.WriteLine("___________________________________________________________________________________________________|");
-
+                            GenreSelectionResult(rating, position, num_ratings, num_reviews, date, artist, names, s);
                         }
-
                     }
-
                 }
-
             }
         }
 
@@ -137,13 +109,19 @@ namespace Code_Kentucky_Semester_One_Final_Project
             List<string> genresList = new List<string>();
             List<string> nameList = new List<string>();
 
+
             foreach (var get in myPosts)
             {
+                var rating = (float?)get.rating;
                 var position = (int?)get.position;
+                var num_ratings = (int?)get.num_ratings;
+                var num_reviews = (int?)get.num_reviews;
+                var date = (int?)get.date;
                 string? artist = get.artist;
                 string? genres = get.genres;
                 string? names = (string?)get.name;
                 string[] strings = genres.Split(",");
+
 
                 foreach (var s in strings)
                 {
@@ -153,26 +131,49 @@ namespace Code_Kentucky_Semester_One_Final_Project
                         genresList.Add(s);
                         nameList.Add(s);
 
-
                         if (s.Contains("Hip Hop"))
                         {
 
-
-                            Console.WriteLine($"{position}. Artist: {artist} - {names}");
-                            Console.WriteLine($"Genre: {s}");
-                            Console.WriteLine("____________________________________________________________________________________________________");
-                            Console.WriteLine("===================================================================================================|");
-                            Console.WriteLine("___________________________________________________________________________________________________|");
-
-
+                            GenreSelectionResult(rating, position, num_ratings, num_reviews, date, artist, names, s);
 
                         }
-
                     }
-
                 }
-
             }
+        }
+
+        public static void SelectionResult(Post post)
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine($"{post.position}. {post.artist} - {post.name}");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"Genre: {post.genres}");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"User Rating: {post.rating} || Number of User Ratings: {post.num_ratings} || Number of User Reviews: {post.num_reviews}");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"Year Released: {post.date}");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("___________________________________________________________________________________________________");
+            Console.WriteLine("                                                                                                   |");
+            Console.WriteLine("___________________________________________________________________________________________________|");
+            Console.WriteLine("");
+        }
+
+        public static void GenreSelectionResult(float? rating, int? position, int? num_ratings, int? num_reviews, int? date, string? artist, string? names, string s)
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine($" [Ranking: {position}]. Artist: {artist} - {names}");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"Genre: {s}");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"User Rating: {rating} || Number of User Ratings: {num_ratings} || Number of User Reviews: {num_reviews}");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"Year Released: {date}");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("___________________________________________________________________________________________________");
+            Console.WriteLine("                                                                                                   |");
+            Console.WriteLine("___________________________________________________________________________________________________|");
+            Console.WriteLine("");
         }
 
         public static async Task MakeAnotherSelection()
@@ -194,10 +195,7 @@ namespace Code_Kentucky_Semester_One_Final_Project
                     Console.WriteLine("Goodbye, Kenny Loggins");
                     Environment.Exit(0);
                 }
-
             }
         }
-
-
     }
 }

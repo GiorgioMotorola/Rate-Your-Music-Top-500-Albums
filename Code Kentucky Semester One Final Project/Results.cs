@@ -9,8 +9,6 @@ namespace Code_Kentucky_Semester_One_Final_Project
 {
     public class Results
     {
-
-
         public static void SelectionResult(Properties post)
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -32,8 +30,6 @@ namespace Code_Kentucky_Semester_One_Final_Project
 
         }
 
-
-
         public static void GenreSelectionResult(float? rating, int? position, int? num_ratings, int? num_reviews, int? date, string? artist, string? names, string s)
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -51,15 +47,9 @@ namespace Code_Kentucky_Semester_One_Final_Project
             Console.WriteLine("______________________________________________________________________________________________________");
             Console.WriteLine();
             Console.WriteLine("");
-            
-
-            
-            
-            
-        }
-
-
-
+            Thread.Sleep(100);
+                   
+        }        
         public static void GenreParcer(Properties get, out float? rating, out int? position, out int? num_ratings, out int? num_reviews, out int? date, out string? artist, out string? names, out string[] strings)
         {
             rating = (float?)get.rating;
@@ -70,8 +60,7 @@ namespace Code_Kentucky_Semester_One_Final_Project
             artist = get.artist;
             string? genres = get.genres;
             names = (string?)get.name;
-            strings = genres.Split(",");
-            
-        }
+            strings = genres.Split(",");            
+        }       
     }
 }

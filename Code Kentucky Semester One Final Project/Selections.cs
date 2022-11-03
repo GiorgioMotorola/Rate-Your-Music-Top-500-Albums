@@ -1,23 +1,20 @@
-﻿namespace Code_Kentucky_Semester_One_Final_Project
+﻿using System.Security.Cryptography;
+
+namespace Code_Kentucky_Semester_One_Final_Project
 {
     public class Selections
     {
-
-        
-
         public static void SelectionAll(Properties post)
         {
             Results.SelectionResult(post);
         }
-
 
         public static void SelectionGenre(Properties[] myPosts, string genre)
         {
             List<string> artistLists = new List<string>();
             List<string> genresList = new List<string>();
             List<string> nameList = new List<string>();
-           
-
+            
             foreach (var get in myPosts)
             {
                 float? rating;
@@ -34,25 +31,13 @@
                         genresList.Add(s);
                         nameList.Add(s);
 
-
                         if (s.Contains(genre))
                         {
-
-                            Results.GenreSelectionResult(rating, position, num_ratings, num_reviews, date, artist, names, s);
-
+                            Results.GenreSelectionResult(rating, position, num_ratings, num_reviews, date, artist, names, s);                            
                         }                       
                     }
                 }
             }
-        }
-
-        public static void SelectionEleven(Properties[] myPosts)
-        {
-           
-            Random random = new Random();
-            random.Next();
-            
-        }
-
+        }       
     }
 }

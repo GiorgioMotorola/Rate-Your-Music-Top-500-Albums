@@ -11,7 +11,10 @@ namespace Code_Kentucky_Semester_One_Final_Project
     {
         public static string? MainMenu()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine();
             Console.WriteLine("Make a selection below: \n");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(" 1. Return Entire List");
             
             Console.WriteLine();
@@ -25,13 +28,11 @@ namespace Code_Kentucky_Semester_One_Final_Project
             Console.WriteLine(" 9. Return all EXPERIMENTAL related genres");
             Console.WriteLine("10. Return all ELECTRONIC related genres");
             Console.WriteLine();
-            Console.WriteLine("11. Can't Decide What To Listen To?");
             Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("000 to Quit :( \n");
 
-
-            Console.WriteLine("0. Quit :( \n");
-
-
+            Console.ForegroundColor = ConsoleColor.Yellow;
             var UserSelection = Console.ReadLine();
             Console.WriteLine();
             Console.Beep(650, 100);
@@ -41,9 +42,16 @@ namespace Code_Kentucky_Semester_One_Final_Project
 
         public static async Task MakeAnotherSelection()
         {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("--------------------------------------------------------------------------------------------");
             Console.WriteLine("Would you like to make another selection?");
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("1. Yes");
-            Console.WriteLine("2. No");
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("000. No");
+            Console.WriteLine();
+            
             var anotherSelection = Console.ReadLine();
 
             while (true)
@@ -51,16 +59,13 @@ namespace Code_Kentucky_Semester_One_Final_Project
                 if (anotherSelection == "1")
                 {
                     await ProgramStartUp.StartProgram();
-
                 }
-                else if (anotherSelection == "2")
+                else if (anotherSelection == "000")
                 {
-                    Console.WriteLine("Goodbye, Kenny Loggins");
+                    Console.WriteLine("Goodbye, Kenny Loggins!");
                     Environment.Exit(0);
                 }
             }
-        }
-
-        
+        }        
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Code_Kentucky_Semester_One_Final_Project
 {
-    public class UI
+    public class Results
     {
 
 
@@ -15,9 +15,9 @@ namespace Code_Kentucky_Semester_One_Final_Project
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write($"{post.position}. ");
-            Console.Write($"{ post.artist} - { post.name}");
+            Console.WriteLine($"{ post.artist} - { post.name}");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine($" || Genre: {post.genres}");           
+            Console.WriteLine($"Genre: {post.genres}");           
             Console.WriteLine($"User Rating: {post.rating} || Number of User Ratings: {post.num_ratings} || Number of User Reviews: {post.num_reviews}");
             Console.WriteLine($"Year Released: {post.date}\n");
             Console.ForegroundColor = ConsoleColor.White;
@@ -63,14 +63,15 @@ namespace Code_Kentucky_Semester_One_Final_Project
         public static void GenreParcer(Properties get, out float? rating, out int? position, out int? num_ratings, out int? num_reviews, out int? date, out string? artist, out string? names, out string[] strings)
         {
             rating = (float?)get.rating;
-            position = (int?)get.position;
-            num_ratings = (int?)get.num_ratings;
-            num_reviews = (int?)get.num_reviews;
-            date = (int?)get.date;
+            position = (int?)(long?)get.position;
+            num_ratings = (int?)(long?)get.num_ratings;
+            num_reviews = (int?)(long?)get.num_reviews;
+            date = (int?)(long?)get.date;
             artist = get.artist;
             string? genres = get.genres;
             names = (string?)get.name;
             strings = genres.Split(",");
+            
         }
     }
 }

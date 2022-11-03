@@ -7,7 +7,7 @@
 
         public static void SelectionAll(Properties post)
         {
-            UI.SelectionResult(post);
+            Results.SelectionResult(post);
         }
 
 
@@ -24,7 +24,7 @@
                 int? position, num_ratings, num_reviews, date;
                 string? artist, names;
                 string[] strings;
-                UI.GenreParcer(get, out rating, out position, out num_ratings, out num_reviews, out date, out artist, out names, out strings);
+                Results.GenreParcer(get, out rating, out position, out num_ratings, out num_reviews, out date, out artist, out names, out strings);
 
                 foreach (string s in strings)
                 {
@@ -38,9 +38,9 @@
                         if (s.Contains(genre))
                         {
 
-                            UI.GenreSelectionResult(rating, position, num_ratings, num_reviews, date, artist, names, s);
+                            Results.GenreSelectionResult(rating, position, num_ratings, num_reviews, date, artist, names, s);
 
-                        }
+                        }                       
                     }
                 }
             }

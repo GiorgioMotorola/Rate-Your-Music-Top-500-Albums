@@ -3,7 +3,7 @@ using System.Reflection.Emit;
 
 namespace Code_Kentucky_Semester_One_Final_Project
 {
-    internal class Start
+    internal class ProgramStartUp
     {
 
        

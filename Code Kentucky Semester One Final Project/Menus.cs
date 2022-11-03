@@ -11,20 +11,18 @@ namespace Code_Kentucky_Semester_One_Final_Project
     {
         public static string? MainMenu()
         {
-            Console.WriteLine("Hello! Make a selection below: ");
-            Console.WriteLine("1. Return Entire List");
-            Console.WriteLine();
-            Console.WriteLine("Or Select a Genre Below");
-            Console.WriteLine();
-            Console.WriteLine("2. Return all ROCK related genres");
-            Console.WriteLine("3. Return all METAL related genres");
-            Console.WriteLine("4. Return all HIP HOP related genres");
-            Console.WriteLine("5. Return all COUNTRY related genres");
-            Console.WriteLine("6. Return all JAZZ related genres");
+            Console.WriteLine("Make a selection below: \n");
+            Console.WriteLine(" 1. Return Entire List");
             
-            Console.WriteLine("7. Return all POP related genres");
-            Console.WriteLine("8. Return all BLUES related genres");
-            Console.WriteLine("9. Return all EXPERIMENTAL related genres");
+            Console.WriteLine();
+            Console.WriteLine(" 2. Return all ROCK related genres");
+            Console.WriteLine(" 3. Return all METAL related genres");
+            Console.WriteLine(" 4. Return all HIP HOP related genres");
+            Console.WriteLine(" 5. Return all COUNTRY related genres");
+            Console.WriteLine(" 6. Return all JAZZ related genres");
+            Console.WriteLine(" 7. Return all POP related genres");
+            Console.WriteLine(" 8. Return all BLUES related genres");
+            Console.WriteLine(" 9. Return all EXPERIMENTAL related genres");
             Console.WriteLine("10. Return all ELECTRONIC related genres");
             Console.WriteLine();
             Console.WriteLine("11. Can't Decide What To Listen To?");
@@ -52,7 +50,7 @@ namespace Code_Kentucky_Semester_One_Final_Project
             {
                 if (anotherSelection == "1")
                 {
-                    await Start.StartProgram();
+                    await ProgramStartUp.StartProgram();
 
                 }
                 else if (anotherSelection == "2")

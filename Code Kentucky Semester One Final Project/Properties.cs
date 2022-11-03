@@ -1,6 +1,6 @@
 ﻿namespace Code_Kentucky_Semester_One_Final_Project
 {
-    public class Post
+    public class Properties
     {
         public int? position { get; set; }
         public string? album_id { get; set; }

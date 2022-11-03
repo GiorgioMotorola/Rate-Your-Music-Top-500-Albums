@@ -1,14 +1,17 @@
-﻿namespace Code_Kentucky_Semester_One_Final_Project
+﻿using System.Diagnostics;
+
+namespace Code_Kentucky_Semester_One_Final_Project
 {
     internal class Program
     {
         static async Task Main(string[] args)
+       {
 
-        {
 
             await Start.StartProgram();
-            await UI.MakeAnotherSelection();
+            await Menus.MakeAnotherSelection();
 
+            
         }
     }
 }

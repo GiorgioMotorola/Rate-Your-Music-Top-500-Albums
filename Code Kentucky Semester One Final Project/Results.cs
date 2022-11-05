@@ -49,18 +49,6 @@ namespace Code_Kentucky_Semester_One_Final_Project
             Console.WriteLine("");
             Thread.Sleep(100);
                    
-        }        
-        public static void GenreParcer(Properties get, out float? rating, out int? position, out int? num_ratings, out int? num_reviews, out int? date, out string? artist, out string? names, out string[] strings)
-        {
-            rating = (float?)get.rating;
-            position = (int?)(long?)get.position;
-            num_ratings = (int?)(long?)get.num_ratings;
-            num_reviews = (int?)(long?)get.num_reviews;
-            date = (int?)(long?)get.date;
-            artist = get.artist;
-            string? genres = get.genres;
-            names = (string?)get.name;
-            strings = genres.Split(",");            
-        }       
+        }                
     }
 }

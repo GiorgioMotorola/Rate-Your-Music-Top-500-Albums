@@ -13,29 +13,29 @@ namespace Code_Kentucky_Semester_One_Final_Project
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine();
-            Console.WriteLine("Make a selection below: \n");
+            Console.WriteLine("\n\n\t\t\t\t\tMake a selection below: \n");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(" 1. Return Entire List");
-            
-            Console.WriteLine();
-            Console.WriteLine(" 2. Return all ROCK related genres");
-            Console.WriteLine(" 3. Return all METAL related genres");
-            Console.WriteLine(" 4. Return all HIP HOP related genres");
-            Console.WriteLine(" 5. Return all COUNTRY related genres");
-            Console.WriteLine(" 6. Return all JAZZ related genres");
-            Console.WriteLine(" 7. Return all POP related genres");
-            Console.WriteLine(" 8. Return all BLUES related genres");
-            Console.WriteLine(" 9. Return all EXPERIMENTAL related genres");
-            Console.WriteLine("10. Return all ELECTRONIC related genres");
-            Console.WriteLine();
-            Console.WriteLine();
+            Console.WriteLine("\t\t\t\t\t1. Return Entire List\n");
+             
+            Console.WriteLine("\t\t\t\t\t2. Return all ROCK related genres");
+            Console.WriteLine("\t\t\t\t\t3. Return all METAL related genres");
+            Console.WriteLine("\t\t\t\t\t4. Return all HIP HOP related genres");
+            Console.WriteLine("\t\t\t\t\t5. Return all COUNTRY related genres");
+            Console.WriteLine("\t\t\t\t\t6. Return all JAZZ related genres");
+            Console.WriteLine("\t\t\t\t\t7. Return all POP related genres");
+            Console.WriteLine("\t\t\t\t\t8. Return all BLUES related genres");
+            Console.WriteLine("\t\t\t\t\t9. Return all EXPERIMENTAL related genres");
+            Console.WriteLine("\t\t\t\t\t10. Return all ELECTRONIC related genres\n\n");            
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("000 to Quit :( \n");
+            Console.WriteLine("\t\t\t\t\t000 to Quit :( \n");
 
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.White;
             var UserSelection = Console.ReadLine();
             Console.WriteLine();
             Console.Beep(650, 100);
+            Console.WriteLine("Got it!");
+            Thread.Sleep(800);
+            Console.Beep(400, 100);
             return UserSelection;
         }
 
@@ -46,11 +46,10 @@ namespace Code_Kentucky_Semester_One_Final_Project
             Console.WriteLine("--------------------------------------------------------------------------------------------");
             Console.WriteLine("Would you like to make another selection?");
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("1. Yes");
-            Console.WriteLine();
+            Console.WriteLine("1. Yes\n");
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("000. No");
-            Console.WriteLine();
+            Console.WriteLine("000. No\n");
+            
             
             var anotherSelection = Console.ReadLine();
 
@@ -58,12 +57,21 @@ namespace Code_Kentucky_Semester_One_Final_Project
             {
                 if (anotherSelection == "1")
                 {
+                    Console.ForegroundColor = ConsoleColor.White;
                     await ProgramStartUp.StartProgram();
                 }
                 else if (anotherSelection == "000")
                 {
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Goodbye, Kenny Loggins!");
                     Environment.Exit(0);
+                }
+                else if (anotherSelection != "1" || anotherSelection != "000")
+                {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Please Enter a Valid Selection");
+                    await ProgramStartUp.StartProgram();
+                    break;
                 }
             }
         }        

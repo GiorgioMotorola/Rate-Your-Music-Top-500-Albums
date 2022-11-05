@@ -1,18 +1,16 @@
 ﻿using Newtonsoft.Json;
-using System.Reflection.Emit;
-using static System.Net.Mime.MediaTypeNames;
+
+
 
 namespace Code_Kentucky_Semester_One_Final_Project
 {
-    internal class ProgramStartUp
+    public class ProgramStartUp
     {
 
        
         public static async Task StartProgram()
         {
-
             string url = "https://raw.githubusercontent.com/GiorgioMotorola/Rate-Your-Music-Top-500-JSON/main/JSON";
-
             HttpClient client = new HttpClient();
 
             try
@@ -26,8 +24,10 @@ namespace Code_Kentucky_Semester_One_Final_Project
                 {
 
                     if (UserSelection == "1")
-                    {
+                    {   
+                        
                         Selections.SelectionAll(post);
+                        
                     }
                     else if (UserSelection == "2")
                     {
@@ -82,8 +82,7 @@ namespace Code_Kentucky_Semester_One_Final_Project
                     {
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("-------------------------------------------ELECTRIONIC GENRES------------------------------------------\n\n");
-                        Selections.SelectionGenre(myPosts, "Electronic");
-                        
+                        Selections.SelectionGenre(myPosts, "Electronic");                       
                     }                    
                     else if (UserSelection == "000")
                     {

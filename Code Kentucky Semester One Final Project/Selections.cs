@@ -1,13 +1,18 @@
-﻿using System.Security.Cryptography;
+﻿
+
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using System;
 
 namespace Code_Kentucky_Semester_One_Final_Project
 {
     public class Selections
     {
-       
+
         public static void SelectionAll(Properties post)
         {
             Results.SelectionResult(post);
+
         }
 
         public static void SelectionGenre(Properties[] myPosts, string genre)
@@ -22,7 +27,16 @@ namespace Code_Kentucky_Semester_One_Final_Project
                 int? position, num_ratings, num_reviews, date;
                 string? artist, names;
                 string[] strings;
-                Selections.GenreParcer(get, out rating, out position, out num_ratings, out num_reviews, out date, out artist, out names, out strings);
+                
+                rating = (float?)get.rating;
+                position = (int?)(long?)get.position;
+                num_ratings = (int?)(long?)get.num_ratings;
+                num_reviews = (int?)(long?)get.num_reviews;
+                date = (int?)(long?)get.date;
+                artist = get.artist;
+                string? genres = get.genres;
+                names = (string?)get.name;
+                strings = genres.Split(",");
 
                 foreach (string s in strings)
                 {
@@ -39,18 +53,6 @@ namespace Code_Kentucky_Semester_One_Final_Project
                     }
                 }
             }
-        }
-        public static void GenreParcer(Properties get, out float? rating, out int? position, out int? num_ratings, out int? num_reviews, out int? date, out string? artist, out string? names, out string[] strings)
-        {
-            rating = (float?)get.rating;
-            position = (int?)(long?)get.position;
-            num_ratings = (int?)(long?)get.num_ratings;
-            num_reviews = (int?)(long?)get.num_reviews;
-            date = (int?)(long?)get.date;
-            artist = get.artist;
-            string? genres = get.genres;
-            names = (string?)get.name;
-            strings = genres.Split(",");
-        }
+        }        
     }    
 }

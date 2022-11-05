@@ -11,6 +11,9 @@ namespace Code_Kentucky_Semester_One_Final_Project
     {
         public static void SelectionResult(Properties post)
         {
+            
+            
+
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write($"{post.position}. ");
             Console.WriteLine($"{ post.artist} - { post.name}");
@@ -33,7 +36,7 @@ namespace Code_Kentucky_Semester_One_Final_Project
             Console.WriteLine($"[Ranking: {position}]. Artist: {artist} - {names}");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine($"Genre: {s}");
-            Console.WriteLine($"User Rating: {rating} || Number of User Ratings: {num_ratings} || Number of User Reviews: {num_reviews}"); 
+            Console.WriteLine($"User Rating: {rating} || Number of User Ratings: {num_ratings} || Number of User Reviews: {num_reviews}");
             Console.WriteLine($"Year Released: {date}\n");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("|| Copy the link below and paste it into your Spotify search field or a web browser to listen ||");
@@ -42,7 +45,7 @@ namespace Code_Kentucky_Semester_One_Final_Project
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("______________________________________________________________________________________________________\n\n");
             Thread.Sleep(100);
-                   
-        }                
+
+        }
     }
 }

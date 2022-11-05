@@ -11,6 +11,7 @@
         public float? rating { get; set; }
         public int? num_ratings { get; set; }
         public int? num_reviews { get; set; }
+        
 
     }
 }

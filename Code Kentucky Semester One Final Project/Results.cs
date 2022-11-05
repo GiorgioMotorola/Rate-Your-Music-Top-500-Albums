@@ -21,12 +21,9 @@ namespace Code_Kentucky_Semester_One_Final_Project
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("|| Copy the link below and paste it into your Spotify search field or a web browser to listen ||");
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine($"http://open.spotify.com/search/{post.artist}+{post.name}");
+            Console.WriteLine($"http://open.spotify.com/search/{post.artist}+{post.name}\n");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine();
-            Console.WriteLine("______________________________________________________________________________________________________");
-            Console.WriteLine();
-            Console.WriteLine("");
+            Console.WriteLine("______________________________________________________________________________________________________\n\n");
 
         }
 
@@ -41,12 +38,9 @@ namespace Code_Kentucky_Semester_One_Final_Project
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("|| Copy the link below and paste it into your Spotify search field or a web browser to listen ||");
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine($"http://open.spotify.com/search/{artist}+{names}");
+            Console.WriteLine($"http://open.spotify.com/search/{artist}+{names}\n");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine();
-            Console.WriteLine("______________________________________________________________________________________________________");
-            Console.WriteLine();
-            Console.WriteLine("");
+            Console.WriteLine("______________________________________________________________________________________________________\n\n");
             Thread.Sleep(100);
                    
         }                

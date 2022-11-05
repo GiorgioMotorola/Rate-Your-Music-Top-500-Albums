@@ -32,75 +32,58 @@ namespace Code_Kentucky_Semester_One_Final_Project
                     else if (UserSelection == "2")
                     {
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("----------------------------------------------ROCK GENRES---------------------------------------------");
-                        Console.WriteLine();
-                        Console.WriteLine();
+                        Console.WriteLine("----------------------------------------------ROCK GENRES---------------------------------------------\n\n");                        
                         Selections.SelectionGenre(myPosts, "Rock");
                         
                     }
                     else if (UserSelection == "3")
                     {
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("----------------------------------------------METAL GENRES---------------------------------------------");
-                        Console.WriteLine();
-                        Console.WriteLine();
+                        Console.WriteLine("----------------------------------------------METAL GENRES---------------------------------------------\n\n");
                         Selections.SelectionGenre(myPosts, "Metal");
                     }
                     else if (UserSelection == "4")
                     {
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("---------------------------------------------HIP HOP GENRES--------------------------------------------");
-                        Console.WriteLine();
-                        Console.WriteLine();
+                        Console.WriteLine("---------------------------------------------HIP HOP GENRES--------------------------------------------\n\n");
                         Selections.SelectionGenre(myPosts, "Hip Hop");
                     }
                     else if (UserSelection == "5")
                     {
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("---------------------------------------------COUNTRY GENRES--------------------------------------------");
-                        Console.WriteLine();
-                        Console.WriteLine();
+                        Console.WriteLine("---------------------------------------------COUNTRY GENRES--------------------------------------------\n\n");
                         Selections.SelectionGenre(myPosts, "Country");
                     }
                     else if (UserSelection == "6")
                     {
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("----------------------------------------------JAZZ GENRES---------------------------------------------");
-                        Console.WriteLine();
-                        Console.WriteLine();
+                        Console.WriteLine("----------------------------------------------JAZZ GENRES---------------------------------------------\n\n");
                         Selections.SelectionGenre(myPosts, "Jazz");
                     }
                     else if (UserSelection == "7")
                     {
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("-----------------------------------------------POP GENRES----------------------------------------------");
-                        Console.WriteLine();
-                        Console.WriteLine();
+                        Console.WriteLine("-----------------------------------------------POP GENRES----------------------------------------------\n\n");
                         Selections.SelectionGenre(myPosts, "Pop");
                     }
                     else if (UserSelection == "8")
                     {
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("----------------------------------------------BLUES GENRES---------------------------------------------");
-                        Console.WriteLine();
-                        Console.WriteLine();
+                        Console.WriteLine("----------------------------------------------BLUES GENRES---------------------------------------------\n\n");
                         Selections.SelectionGenre(myPosts, "Blues");
                     }
                     else if (UserSelection == "9")
                     {
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("------------------------------------------EXPERIMENTAL GENRES------------------------------------------");
-                        Console.WriteLine();
-                        Console.WriteLine();
+                        Console.WriteLine("------------------------------------------EXPERIMENTAL GENRES------------------------------------------\n\n");
                         Selections.SelectionGenre(myPosts, "Experimental");
                     }
                     else if (UserSelection == "10")
                     {
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("-------------------------------------------ELECTRIONIC GENRES------------------------------------------");
-                        Console.WriteLine();
-                        Console.WriteLine();
+                        Console.WriteLine("-------------------------------------------ELECTRIONIC GENRES------------------------------------------\n\n");
                         Selections.SelectionGenre(myPosts, "Electronic");
+                        
                     }                    
                     else if (UserSelection == "000")
                     {

@@ -34,7 +34,8 @@ namespace Code_Kentucky_Semester_One_Final_Project
             Console.WriteLine("\t\t\t\t\t7. Return all POP related genres"); 
             Console.WriteLine("\t\t\t\t\t8. Return all BLUES related genres"); 
             Console.WriteLine("\t\t\t\t\t9. Return all EXPERIMENTAL related genres"); 
-            Console.WriteLine("\t\t\t\t\t10. Return all ELECTRONIC related genres\n\n"); 
+            Console.WriteLine("\t\t\t\t\t10. Return all ELECTRONIC related genres\n\n");
+            Console.WriteLine("\t\t\t\t\t11. Search for a SPECIFIC ARTIST\n\n");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("\t\t\t\t\t000 to Quit :( \n"); 
 

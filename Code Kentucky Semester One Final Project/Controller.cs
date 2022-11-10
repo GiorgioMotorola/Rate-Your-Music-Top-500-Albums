@@ -17,24 +17,22 @@ namespace Code_Kentucky_Semester_One_Final_Project
             {
                 var httpResponseMessage = await client.GetAsync(url);
                 string jsonResponse = await httpResponseMessage.Content.ReadAsStringAsync();
-                var myPosts = JsonConvert.DeserializeObject<Properties[]>(jsonResponse);
+                Properties[] myPosts = JsonConvert.DeserializeObject<Properties[]>(jsonResponse);
                 string? UserSelection = Menus.MainMenu();
                
                 foreach (var post in myPosts)
                 {
 
                     if (UserSelection == "1")
-                    {   
-                        
+                    {
                         Selections.SelectionAll(post);
-                        
+                                              
                     }
                     else if (UserSelection == "2")
                     {
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("----------------------------------------------ROCK GENRES---------------------------------------------\n\n");                        
-                        Selections.SelectionGenre(myPosts, "Rock");
-                        
+                        Selections.SelectionGenre(myPosts, "Rock");                       
                     }
                     else if (UserSelection == "3")
                     {
@@ -57,7 +55,7 @@ namespace Code_Kentucky_Semester_One_Final_Project
                     else if (UserSelection == "6")
                     {
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("----------------------------------------------JAZZ GENRES---------------------------------------------\n\n");
+                        Console.WriteLine("----------------------------------------------JAZZ GENRES----------------------------------------------\n\n");
                         Selections.SelectionGenre(myPosts, "Jazz");
                     }
                     else if (UserSelection == "7")
@@ -83,7 +81,11 @@ namespace Code_Kentucky_Semester_One_Final_Project
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("-------------------------------------------ELECTRIONIC GENRES------------------------------------------\n\n");
                         Selections.SelectionGenre(myPosts, "Electronic");                       
-                    }                    
+                    }
+                    else if(UserSelection == "11")
+                    {
+                        Selections.SelectionName(myPosts);
+                    }
                     else if (UserSelection == "000")
                     {
                         Console.WriteLine("Goodbye, Kenny Loggins!");
@@ -93,7 +95,7 @@ namespace Code_Kentucky_Semester_One_Final_Project
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("");
             }
             finally
             {

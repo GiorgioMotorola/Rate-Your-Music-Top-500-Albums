@@ -104,3 +104,92 @@ string url = "https://raw.githubusercontent.com/GiorgioMotorola/Rate-Your-Music-
             }
         }
 ```        
+
+The Selections class will either return everything, split thru all Genres or allow the user to search by Artist name. It then references the Results class which displays the selection to the user by calling the Properties: 
+
+```C#
+ public class Selections
+    {
+
+        public static void SelectionAll(Properties post)
+        {
+            Results.SelectionResult(post);
+        }
+
+        public static void SelectionName(Properties[] myPosts)
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Please Enter an Artists Name (lowercase only, please):");
+            Console.WriteLine("Try: 'radiohead' or 'kendrick lamar'");
+            var select = Console.ReadLine();
+
+            List<string> artistLists = new List<string>();
+            List<string> genresList = new List<string>();
+            List<string> nameList = new List<string>();
+
+            foreach (var get in myPosts)
+            {
+                float? rating;
+                int? position, num_ratings, num_reviews, date;
+                string? artist, names;
+                string[] strings;
+
+                rating = (float?)get.rating;
+                position = (int?)(long?)get.position;
+                num_ratings = (int?)(long?)get.num_ratings;
+                num_reviews = (int?)(long?)get.num_reviews;
+                date = (int?)(long?)get.date;
+                artist = get.artist;
+                string? genres = get.genres;
+                names = (string?)get.name;
+                
+
+
+                  if (select.Contains(artist.ToLower()))
+                {
+                    Results.ArtistSelectionResult(rating, position, num_ratings, num_reviews, date, artist, names, genres);
+                }                                                  
+            }             
+        }
+
+        public static void SelectionGenre(Properties[] myPosts, string genre)
+        {
+            List<string> artistLists = new List<string>();
+            List<string> genresList = new List<string>();
+            List<string> nameList = new List<string>();
+            
+            foreach (var get in myPosts)
+            {
+                float? rating;
+                int? position, num_ratings, num_reviews, date;
+                string? artist, names;
+                string[] strings;
+                
+                rating = (float?)get.rating;
+                position = (int?)(long?)get.position;
+                num_ratings = (int?)(long?)get.num_ratings;
+                num_reviews = (int?)(long?)get.num_reviews;
+                date = (int?)(long?)get.date;
+                artist = get.artist;
+                string? genres = get.genres;
+                names = (string?)get.name;
+                strings = genres.Split(",");
+
+                foreach (string s in strings)
+                {
+                    if (!genresList.Contains(s) && !artistLists.Contains(s) && !nameList.Contains(s))
+                    {
+                        artistLists.Add(s);
+                        genresList.Add(s);
+                        nameList.Add(s);
+
+                        if (s.Contains(genre))
+                        {                           
+                            Results.GenreSelectionResult(rating, position, num_ratings, num_reviews, date, artist, names, s);                           
+                        }
+                    }
+                }
+            }
+        }        
+        
+```       

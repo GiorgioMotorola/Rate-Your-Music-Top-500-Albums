@@ -203,7 +203,7 @@ The Selections class will either return everything, allow the user to search by 
         
 ```       
 
-The output returns the data, including a link you can Copy/Paste into a Spotify search bar or your preferred internet browser: 
+The output returns the data, including a link you can Copy/Paste into a Spotify search bar or your preferred internet browser:  
 ![image](https://user-images.githubusercontent.com/97712526/202047795-02bf32c1-2bd8-4ec4-aeab-efacc49354dd.png)
 
 

@@ -8,3 +8,10 @@ I put the .JSON file in a Git Hub repository. The program receives the .JSON res
 string url = "https://raw.githubusercontent.com/GiorgioMotorola/Rate-Your-Music-Top-500-JSON/main/JSON";
 HttpClient client = new HttpClient();
 ```
+
+```C#
+ var httpResponseMessage = await client.GetAsync(url);
+string jsonResponse = await httpResponseMessage.Content.ReadAsStringAsync();
+Properties[] myPosts = JsonConvert.DeserializeObject<Properties[]>(jsonResponse);
+string? UserSelection = Menus.MainMenu();
+```

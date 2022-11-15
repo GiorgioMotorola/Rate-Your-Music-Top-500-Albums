@@ -6,6 +6,7 @@ I located a .tsv file off of https://data.world/notgibs/rateyourmusic-top500-alb
 
 In order to demonstrate making a RESTful API call, I put the .JSON file in a Git Hub repository. The program receives the .JSON response body and then deserializes it to allow the user to parse thru the data:
 
+
 ```C#
 string url = "https://raw.githubusercontent.com/GiorgioMotorola/Rate-Your-Music-Top-500-JSON/main/JSON";
 HttpClient client = new HttpClient();
@@ -18,7 +19,9 @@ Properties[] myPosts = JsonConvert.DeserializeObject<Properties[]>(jsonResponse)
 string? UserSelection = Menus.MainMenu();
 ```
 
+
 The above block of code is ran thru a Try Catch statement, then a foreach loop and finally a Switch statement which controls the user selection in the menu: 
+
 
 ```C# 
 string url = "https://raw.githubusercontent.com/GiorgioMotorola/Rate-Your-Music-Top-500-JSON/main/JSON";
@@ -105,7 +108,9 @@ string url = "https://raw.githubusercontent.com/GiorgioMotorola/Rate-Your-Music-
         }
 ```        
 
+
 The Selections class will either return everything, split thru all Genres or allow the user to search by Artist name. It then references the Results class which displays the selection to the user by calling the Properties: 
+
 
 ```C#
  public class Selections
@@ -193,3 +198,4 @@ The Selections class will either return everything, split thru all Genres or all
         }        
         
 ```       
+

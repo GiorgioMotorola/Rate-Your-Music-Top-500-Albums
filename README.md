@@ -112,7 +112,7 @@ string url = "https://raw.githubusercontent.com/GiorgioMotorola/Rate-Your-Music-
 
 
 
-The Selections class will either return everything, split thru all Genres or allow the user to search by Artist name. It then references the Results class which displays the selection to the user by calling the Properties: 
+The Selections class will either return everything, allow the user to search by Artist name or store Artist, Genre and Album name into lists and split thru all Genres. It then references the Results class which displays the selection to the user by calling the Properties: 
 
 
 
@@ -203,3 +203,9 @@ The Selections class will either return everything, split thru all Genres or all
         
 ```       
 
+This Console applicaion meets the following final project requirements: 
+
+1. Read data from an external file, such as text, JSON, CSV, etc and use that data in your application.
+2. Implement a “master loop” console application where the user can repeatedly enter commands/perform actions, including choosing to exit the program.
+3. Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program.
+4. 

@@ -209,7 +209,7 @@ The output returns the data, including a link you can Copy/Paste into a Spotify 
 
 This Console applicaion meets the following final project requirements: 
 
-1. Read data from an external file, such as text, JSON, CSV, etc and use that data in your application. (Demonstrated in FIRST TWO code blocks above)
-2. Implement a “master loop” console application where the user can repeatedly enter commands/perform actions, including choosing to exit the program. (Demonstrated in THIRD code block above)
-3. Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program. (Demonstrated in THE LAST block above)
+1. Read data from an external file, such as text, JSON, CSV, etc and use that data in your application. **(Demonstrated in FIRST TWO code blocks above)**
+2. Implement a “master loop” console application where the user can repeatedly enter commands/perform actions, including choosing to exit the program. **(Demonstrated in THIRD code block above)**
+3. Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program. **(Demonstrated in THE LAST block above)**
 
